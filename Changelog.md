@@ -1,1 +1,3 @@
-1/20/23 created changelog file
+1/23/23 
+  - created changelog file
+  - added homeworkOne file
