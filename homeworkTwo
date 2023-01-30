@@ -1,0 +1,58 @@
+namespace homeworkTwo;
+class Program
+{
+    static void Main(string[] args)
+    {
+        //question 1
+        Console.WriteLine("Please input a letter grade:");
+        String grade = Console.ReadLine();
+        if (grade == "a" || grade == "A"){
+            Console.WriteLine("GPA point: 4");
+        } else if (grade == "b" || grade == "B"){
+            Console.WriteLine("GPA point: 3");
+        } else if (grade == "c" || grade == "C"){
+            Console.WriteLine("GPA point: 2");
+        } else if (grade == "d" || grade == "D"){
+            Console.WriteLine("GPA point: 1");
+        } else if (grade == "f" || grade == "F"){
+            Console.WriteLine("GPA point: 0");
+        } else {
+            Console.WriteLine("Wrong Letter Grade!");
+        }
+
+        //question 2
+        int small;
+        Console.WriteLine("Please input the first number:");
+        int one = Convert.ToInt16(Console.ReadLine());
+        Console.WriteLine("Please input the second number:");
+        int two = Convert.ToInt16(Console.ReadLine());
+        if (one < two){
+            small = one;
+        } else {
+            small = two;
+        }
+        Console.WriteLine("Please input the third number:");
+        int three = Convert.ToInt16(Console.ReadLine());
+        if (three < small){
+            small = three;
+        }
+
+        Console.WriteLine("The smallest value is: " + small);
+        
+        //bonus
+        Console.WriteLine("Please input a year:");
+        int year = Convert.ToInt16(Console.ReadLine());
+        if (year % 4 == 0){
+            if (year % 100 !=0){
+                Console.WriteLine(year + " is a Leap Year.");
+            } else if (year % 400 == 0){
+                Console.WriteLine(year + " is a Leap Year.");
+            } else {
+                Console.WriteLine(year + " is not a Leap Year.");
+            }
+            
+        } else {
+            Console.WriteLine(year + " is not a Leap Year.");
+        }
+    }
+}
