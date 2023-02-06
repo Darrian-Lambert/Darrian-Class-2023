@@ -1,0 +1,56 @@
+namespace homeworkthree;
+class Program
+{
+    static void Main(string[] args)
+    {
+        //q1
+
+        Console.WriteLine("Please enter a number:");
+        int pNum = Convert.ToInt32(Console.ReadLine());
+        bool prime = true;
+        for (int i = 2; i<pNum; i++){
+            if (pNum%i == 0){
+                prime = false;
+                break;
+            }
+        }
+        if (prime == true){
+            Console.WriteLine("N is prime");
+        } else {
+            Console.WriteLine("N is non-prime");
+        }
+
+        //q2
+
+        Console.WriteLine("Please enter a number:");
+        int sNum = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= sNum; i++){
+            Console.WriteLine("#####");
+        }
+
+        //q3
+
+        Console.WriteLine("Please enter a number:");
+        int tNum = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= tNum; i++){
+            for (int x = 1; x <= i; x++){
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+
+        //b
+
+        Console.WriteLine("Please enter a number:");
+        int qNum = Convert.ToInt32(Console.ReadLine());
+        for (int i = 1; i <= qNum; i++){
+            for (int x = qNum-i; x>=1; x--){
+                Console.Write(" ");
+            }
+            for (int x = 1; x <= i; x++){
+                Console.Write(i);
+            }
+            Console.WriteLine();
+        }
+    }
+}
