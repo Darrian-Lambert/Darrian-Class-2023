@@ -1,0 +1,51 @@
+namespace homeworkFour;
+class Program
+{
+    static void Main(string[] args)
+    {
+        //Q1
+        Console.WriteLine("Please input #1");
+        int one = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please input #2");
+        int two = Convert.ToInt32(Console.ReadLine());
+        if (one > two){
+            Console.WriteLine("The largest number is: " + one);
+        } else {
+            Console.WriteLine("The largest number is: " + two);
+        }
+        //Q2
+        Console.WriteLine("Please input a number: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please input left or right: ");
+        string d = Console.ReadLine();
+        bool done = false;
+        while (done == false){
+            if (d == "left" || d == "Left" || d == "l" || d =="L"){
+                Console.WriteLine("N is: " + num + "; shape is left.");
+                for (int i = 1; i <= num; i++){
+                    for (int x = 1; x <= i; x++){
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+                done = true;
+            } else if (d == "right" || d == "Right" || d == "r" || d == "R"){
+                Console.WriteLine("N is: " + num + "; shape is right.");
+                for (int i = 1; i <= num; i++){
+                    for (int x = num-i; x>=1; x--){
+                        Console.Write(" ");
+                    }
+                    for (int x = 1; x <=i; x++){
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+                done = true;
+            } else {
+                Console.WriteLine("Please input left or right: ");
+                d = Console.ReadLine();
+            }
+        }
+        
+    }
+}
