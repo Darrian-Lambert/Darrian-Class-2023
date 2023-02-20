@@ -1,0 +1,62 @@
+namespace homeworkFive;
+class Program
+{
+    static void Main(string[] args)
+    {
+        //q1
+        Console.WriteLine("Please enter an intager:");
+        int one = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter an intager:");
+        int two = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("The largest is: "+Max(one, two)); //end of q1
+        //q2
+        Console.WriteLine("Please enter intager #1:");
+        one = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter intager #2:");
+        two = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter intager #3:");
+        int three = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Please enter intager #4:");
+        int four = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("The largest is: "+Max(one, two, three, four));//end of q2
+        //q3
+        createAccount();
+    }
+    static int Max(int one, int two, int three=-2147483648, int four=-2147483648){
+        if (one > two && one > three && one > four){
+            return one;
+        } else if (two > three && two > four){
+            return two;
+        } else if (three > four){
+            return three;
+        } else {
+            return four;
+        }
+    }
+    static void createAccount(){
+        Console.WriteLine("Please enter a username: ");
+        string name = Console.ReadLine();
+        Console.WriteLine("Please enter a password: ");
+        string password = Console.ReadLine();
+        Console.WriteLine("Please re-enter your password: ");
+        string passwordCheck = Console.ReadLine();
+        Console.WriteLine("Please enter your Birthyear: ");
+        int year = Convert.ToInt16(Console.ReadLine());
+        if (checkAge(year) == true){
+            if (password == passwordCheck){
+                Console.WriteLine("Account is created successfully");
+            } else {
+                Console.WriteLine("Wrong password");
+            }
+        } else {
+            Console.WriteLine("Could not create an account");
+        }
+    }
+    static bool checkAge(int year=9999){
+        if (year < 2005){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
